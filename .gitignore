@@ -135,6 +135,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+C:\Users\goura\Desktop\DS\Projects_\Student_analysis\sklearn-env/gitignore/sklearn
 .artifacts
 .env
 .envrc
