@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: trial
+Version: 0.0.1
+Author: Gourav
+Author-email: gouravsng18@gmail.com
+Requires: pandas
+Requires: numpy
+Requires: seaborn

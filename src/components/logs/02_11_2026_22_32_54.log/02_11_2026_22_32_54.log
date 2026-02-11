@@ -1,0 +1,5 @@
+[2026-02-11 22:32:55,351] 148 numexpr.utils -INFO -Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2026-02-11 22:32:55,351] 160 numexpr.utils -INFO -NumExpr defaulting to 8 threads.
+[2026-02-11 22:32:56,326] 21 root -INFO -Data Injestion started
+[2026-02-11 22:32:56,376] 24 root -INFO -Dataset read as pandas Dataframe
+[2026-02-11 22:32:56,410] 34 root -INFO -Data Injestion completed
