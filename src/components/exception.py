@@ -1,16 +1,15 @@
 import sys
 from logger import logging
-
-def error_messsage_detail(error,error_detail:sys):
+def error_messsage_detail(error,error_detail:sys): # type: ignore
     _,_,exe_tb = error_detail.exc_info()
-    file_name = exe_tb.tb_frame.f_code.co_filename
+    file_name = exe_tb.tb_frame.f_code.co_filename # type: ignore
     error_message = "An error has occured in [{0}] line number [{1}] error message[{2}]".format(
-     file_name,exe_tb.tb_lineno,str(error))
+     file_name,exe_tb.tb_lineno,str(error)) # type: ignore
     return error_message
 
 
 class custom_exception(Exception):
-    def __init__(self, error_message,error_detail:sys):
+    def __init__(self, error_message,error_detail:sys): # type: ignore
         super().__init__(error_message)
         self.error_message = error_messsage_detail(error_message,error_detail=error_detail)
 
@@ -18,9 +17,5 @@ class custom_exception(Exception):
         return self.error_message
     
 if __name__ == "__main__":
-    try:
-        a=1/0
-    except Exception as e:
-        logging.info("Cannot be divided by zero.")
-        raise custom_exception(e,sys)
+    logging.info("Logging has started")
     

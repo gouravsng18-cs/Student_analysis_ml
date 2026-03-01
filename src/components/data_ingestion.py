@@ -20,7 +20,7 @@ class dataingestion:
     def initiate_data_ingestion(self):
         logging.info("Data Injestion started")
         try:
-            df=pd.read_csv("C:/Users/goura/Desktop/DS/Projects_/git_trial/Notebooks/students.csv")
+            df=pd.read_csv("C:/Users/goura/Desktop/DS/Projects_/Student_analysis/Notebooks/students.csv")
             logging.info("Dataset read as pandas Dataframe")
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
