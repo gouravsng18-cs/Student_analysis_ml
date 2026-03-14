@@ -44,7 +44,7 @@ class datatransformtion:
                 steps=[
                     ("imputer",SimpleImputer(strategy="most_frequent")),
                     ("one_hot_encoder",OneHotEncoder()),
-                    ("scaler",StandardScaler())
+                    ("scaler",StandardScaler(with_mean=False))
                 ]
             )
             logging.info("The scaling of the numerical features is completed.")
@@ -74,7 +74,7 @@ class datatransformtion:
               input_features_train_df = train_df.drop(columns=[target_column_name])
               target_feature_train_df = train_df[target_column_name]
 
-              input_feature_test_df = test_df.drop(columns=[target_column_name],axis = 1)
+              input_feature_test_df = test_df.drop(columns=[target_column_name])
               target_feature_test_df = test_df[target_column_name]
 
               logging.info("Applying preprocessing to the train and test dataframes")
@@ -103,5 +103,6 @@ class datatransformtion:
                    test_arr,
                    self.data_transformation_config.perprpcessor_obj_file_path
               )
-         except:
-                pass
+              logging.info("Data transformation completed")
+         except Exception as e:
+                raise custom_exception(e,sys)
